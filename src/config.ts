@@ -1,91 +1,64 @@
 export const siteConfig = {
-  name: "Ryan Fitzgerald",
-  title: "Senior Software Engineer",
-  description: "Portfolio website of Ryan Fitzgerald",
+  name: "Soroush Lotfi",
+  title: "Software Engineer and AI Enthusiast",
+  description: "Portfolio website of Soroush Lotfi",
   accentColor: "#1d4ed8",
   social: {
-    email: "your-email@example.com",
-    linkedin: "https://linkedin.com/in/yourprofile",
-    twitter: "https://x.com/rfitzio",
-    github: "https://github.com/RyanFitzgerald",
+    email: "slotfi909@gmail.com",
+    linkedin: "https://linkedin.com/in/slotfi909",
+    github: "https://github.com/slotfi909",
+    // twitter: "https://x.com/lsorooshl"
   },
   aboutMe:
-    "Lorem ipsum dolor sit amet, consectetur adipisicing elit. Rem quos asperiores nihil consequatur tempore cupiditate architecto natus commodi corrupti quas quasi facere est, dignissimos odit nam veniam sapiente ut, vitae eligendi ipsum dolor, nostrum ullam impedit! Corrupti ratione mollitia temporibus necessitatibus, consectetur reiciendis recusandae id, dolorum quaerat, vero pariatur. Ratione!",
-  skills: ["Javascript", "React", "Node.js", "Python", "AWS", "Docker"],
+    "interested in consiousness, computers and math. whatever makes me understand more about life!",
+  skills: ["C++", "Python", "Qt", "Design Patterns", "OOA&D", "Neural Networks"],
   projects: [
     {
-      name: "AI Dev Roundup Newsletter",
+      name: "ChemQC",
       description:
-        "One concise email. Five minutes. Every Tuesday. Essential AI news & trends, production-ready libraries, powerful AI tools, and real-world code examples",
-      link: "https://aidevroundup.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "a LIMS application for managing the data produced in polymer plants.",
+      link: "https://ChemQC.ir",
+      skills: ["Qt", "C++", "SQL"],
     },
     {
-      name: "Chrome Extension Mastery: Build Full-Stack Extensions with React & Node.js",
+      name: "DiamondBot",
       description:
-        "Master the art of building production-ready, full-stack Chrome Extensions using modern web technologies and best practices",
-      link: "https://fullstackextensions.com/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
-    },
-    {
-      name: "ExtensionKit",
-      description:
-        "Kit to jump-start your Chrome extension projects with a variety of battle-tested starter templates & examples",
-      link: "https://extensionkit.io/?ref=devportfolio",
-      skills: ["React", "Node.js", "AWS"],
+        "A Persian-language Telegram bot for educational advising: student registration, referral links, product purchases through ZarinPal or an operator, advisor chats, admin notifications, customer spreadsheet exports, and student PDF upload/retrieval. ",
+      link: "https://github.com/slotfi909/DiamondBot",
+      skills: ["Python", "Docker", "PostGreSQL"],
     },
   ],
   experience: [
     {
-      company: "Tech Company",
-      title: "Senior Software Engineer",
-      dateRange: "Jan 2022 - Present",
+      company: "Pishro Hooshmand Sepahan",
+      title: "Artificial Intelligence Developer",
+      dateRange: "Aug 2023 - Oct 2025",
       bullets: [
-        "Led development of microservices architecture serving 1M+ users",
-        "Reduced API response times by 40% through optimization",
-        "Mentored team of 5 junior developers",
+        "designing AI solutions for Industrial Problems",
+        "software developing with Qt",
+        "a bit of reverse engineering once in a while",
       ],
-    },
-    {
-      company: "Startup Inc",
-      title: "Full Stack Developer",
-      dateRange: "Jun 2020 - Dec 2021",
-      bullets: [
-        "Built and launched MVP product from scratch using React and Node.js",
-        "Implemented CI/CD pipeline reducing deployment time by 60%",
-        "Collaborated with product team to define technical requirements",
-      ],
-    },
-    {
-      company: "Digital Agency",
-      title: "Frontend Developer",
-      dateRange: "Aug 2018 - May 2020",
-      bullets: [
-        "Developed responsive web applications for 20+ clients",
-        "Improved site performance scores by 35% on average",
-        "Introduced modern JavaScript frameworks to legacy codebases",
-      ],
-    },
+    }
   ],
   education: [
     {
-      school: "University Name",
-      degree: "Bachelor of Science in Computer Science",
-      dateRange: "2014 - 2018",
+      school: "Shahid Beheshti University",
+      degree:  "Masters of Computer Architecture in Computer Engineering",
+      dateRange: "2025 - 2027",
       achievements: [
-        "Graduated Magna Cum Laude with 3.8 GPA",
-        "Dean's List all semesters",
-        "President of Computer Science Club",
+      //   "Graduated Magna Cum Laude with 3.8 GPA",
+      //   "Dean's List all semesters",
+      //   "President of Computer Science Club",
       ],
     },
     {
-      school: "Online Platform",
-      degree: "Full Stack Development Certificate",
-      dateRange: "2019",
+      school: "Isfahan University of Technology",
+      degree: "Bachelor of Artificial Intelligence in Computer Engineering",
+      dateRange: "2025 - 2021",
       achievements: [
-        "Completed 500+ hours of coursework",
-        "Built 10+ portfolio projects",
-        "Specialized in React and Node.js",
+      //   "Completed 500+ hours of coursework",
+      //   "Built 10+ portfolio projects",
+      //   "Specialized in React and Node.js",
       ],
     },
   ],
