@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import { t } from '../i18n';
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 ---
 
@@ -9,8 +10,8 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
       <div>
         <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-16 items-start">
           <div class="lg:col-span-4">
-            <h2 class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
-              Projects
+            <h2 data-i18n="headings.projects" class="text-3xl sm:text-4xl md:text-5xl xl:text-7xl font-bold text-gray-900">
+              {t('headings.projects')}
             </h2>
             <div
               class="w-[75px] h-[5px] mt-2 rounded-full"
@@ -61,31 +62,34 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       <div class="space-y-4">
                         <div>
                           <span
+                            data-i18n={`projects.${index}.number`}
                             class="text-sm font-mono"
                             style={{ color: siteConfig.accentColor }}
                           >
-                            0{index + 1}
+                            {t(`projects.${index}.number`)}
                           </span>
-                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {project.name}
+                          <h3 data-i18n={`projects.${index}.name`} class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                            {t(`projects.${index}.name`)}
                           </h3>
                         </div>
 
                         <p
+                          data-i18n={`projects.${index}.description`}
                           class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
                         >
-                          {project.description}
+                          {t(`projects.${index}.description`)}
                         </p>
 
                         {project.skills && project.skills.length > 0 && (
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
-                            {project.skills.map((skill) => (
+                            {project.skills.map((_, skillIndex) => (
                               <span
+                                data-i18n={`projects.${index}.skills.${skillIndex}`}
                                 class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
                                   project.link ? "group-hover:bg-gray-800" : ""
                                 }`}
                               >
-                                {skill}
+                                {t(`projects.${index}.skills.${skillIndex}`)}
                               </span>
                             ))}
                           </div>

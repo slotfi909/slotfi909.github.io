@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import { t } from '../i18n';
 ---
 
 <div
@@ -132,21 +133,24 @@ import { siteConfig } from "../config";
   <div class="h-full mx-auto p-8 sm:p-12 md:p-24 flex items-center">
     <div>
       <h2
+        data-i18n="hero.greeting"
         class="text-pretty text-xl sm:text-2xl md:text-5xl font-bold tracking-tight text-gray-700 animate-fade-in"
       >
-        Hello! 👋
+        {t('hero.greeting')}
       </h2>
       <h1
         class="mt-6 sm:mt-8 md:mt-10 text-pretty text-4xl sm:text-5xl md:text-6xl lg:text-8xl font-bold tracking-tight text-gray-800 animate-fade-in animation-delay-200"
       >
-        I'm <span style={{ color: siteConfig.accentColor }}
-          >{siteConfig.name}</span
-        >
+        <span data-i18n="hero.introduction">{t('hero.introduction')}</span><span
+          data-i18n="name"
+          style={{ color: siteConfig.accentColor }}>{t('name')}</span
+        ><span data-i18n="hero.outro">{t('hero.outro')}</span>
       </h1>
       <p
+        data-i18n="title"
         class="mt-4 sm:mt-6 md:mt-8 text-pretty text-base sm:text-lg md:text-xl/8 font-medium text-gray-600 animate-fade-in animation-delay-400"
       >
-        {siteConfig.title}
+        {t('title')}
       </p>
     </div>
   </div>
@@ -157,7 +161,8 @@ import { siteConfig } from "../config";
       siteConfig.social?.email && (
         <a
           href={`mailto:${siteConfig.social.email}`}
-          aria-label="Email"
+          data-i18n-aria-label="social.email"
+          aria-label={t('social.email')}
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
@@ -185,7 +190,8 @@ import { siteConfig } from "../config";
           href={siteConfig.social.linkedin}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="LinkedIn"
+          data-i18n-aria-label="social.linkedin"
+          aria-label={t('social.linkedin')}
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
@@ -218,7 +224,8 @@ import { siteConfig } from "../config";
           href={siteConfig.social.twitter}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="Twitter"
+          data-i18n-aria-label="social.twitter"
+          aria-label={t('social.twitter')}
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
@@ -248,7 +255,8 @@ import { siteConfig } from "../config";
           href={siteConfig.social.github}
           target="_blank"
           rel="noopener noreferrer"
-          aria-label="GitHub"
+          data-i18n-aria-label="social.github"
+          aria-label={t('social.github')}
           class="transition-colors duration-300 hover:text-[var(--accent-color)]"
         >
           <svg
