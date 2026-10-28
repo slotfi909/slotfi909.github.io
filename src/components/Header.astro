@@ -1,6 +1,6 @@
 ---
 import { siteConfig } from "../config";
-import { t } from '../i18n';
+import { t } from "../i18n";
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
@@ -9,71 +9,87 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
 
 <header
   id="header"
-  class="fixed top-0 left-0 right-0 z-50 hidden md:block transition-all duration-300"
+  class="fixed top-0 left-0 right-0 z-50 transition-all duration-300"
 >
-  <nav class="max-w-7xl mx-auto px-8 py-4">
-    <ul class="flex items-center gap-8 justify-center">
-      <li>
-        <a
-          href="#about"
-          data-i18n="nav.about"
-          class="text-gray-700 hover:text-black transition-colors font-medium"
-        >
-          {t('nav.about')}
-        </a>
-      </li>
-      {
-        hasProjects && (
-          <li>
-            <a
-              href="#projects"
-              data-i18n="nav.projects"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              {t('nav.projects')}
-            </a>
-          </li>
-        )
-      }
-      {
-        hasExperience && (
-          <li>
-            <a
-              href="#experience"
-              data-i18n="nav.experience"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              {t('nav.experience')}
-            </a>
-          </li>
-        )
-      }
-      {
-        hasEducation && (
-          <li>
-            <a
-              href="#education"
-              data-i18n="nav.education"
-              class="text-gray-700 hover:text-black transition-colors font-medium"
-            >
-              {t('nav.education')}
-            </a>
-          </li>
-        )
-      }
-    </ul>
-  </nav>
+  <div class="relative max-w-7xl mx-auto px-8 py-3 flex items-center justify-end md:justify-center gap-6 min-h-16">
+    <nav class="hidden md:block md:py-1">
+      <ul class="flex items-center gap-8 justify-center">
+        <li>
+          <a
+            href="#about"
+            data-i18n="nav.about"
+            class="text-gray-700 hover:text-black transition-colors font-medium"
+          >
+            {t("nav.about")}
+          </a>
+        </li>
+        {
+          hasProjects && (
+            <li>
+              <a
+                href="#projects"
+                data-i18n="nav.projects"
+                class="text-gray-700 hover:text-black transition-colors font-medium"
+              >
+                {t("nav.projects")}
+              </a>
+            </li>
+          )
+        }
+        {
+          hasExperience && (
+            <li>
+              <a
+                href="#experience"
+                data-i18n="nav.experience"
+                class="text-gray-700 hover:text-black transition-colors font-medium"
+              >
+                {t("nav.experience")}
+              </a>
+            </li>
+          )
+        }
+        {
+          hasEducation && (
+            <li>
+              <a
+                href="#education"
+                data-i18n="nav.education"
+                class="text-gray-700 hover:text-black transition-colors font-medium"
+              >
+                {t("nav.education")}
+              </a>
+            </li>
+          )
+        }
+      </ul>
+    </nav>
+    <button
+      id="language-toggle"
+      type="button"
+      hidden
+      data-i18n-aria-label="language.action"
+      aria-label={t("language.action")}
+      class="md:absolute md:end-8 min-h-11 min-w-20 px-4 py-2 rounded-full border border-gray-300 bg-white/90 text-gray-800 font-medium cursor-pointer hover:bg-gray-100 transition-colors focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-blue-700"
+    ><span data-i18n="language.label" lang="fa" dir="rtl">{t("language.label")}</span></button>
+  </div>
 </header>
 
 <script>
-  window.addEventListener("scroll", () => {
+  import { initLanguageToggle } from "../scripts/language";
+
+  initLanguageToggle();
+
+  const updateHeader = () => {
     const header = document.getElementById("header");
     if (window.scrollY > 100) {
       header?.classList.add("bg-white/80", "backdrop-blur-sm");
     } else {
       header?.classList.remove("bg-white/80", "backdrop-blur-sm");
     }
-  });
+  };
+  updateHeader();
+  window.addEventListener("scroll", updateHeader, { passive: true });
 </script>
 
 <style>

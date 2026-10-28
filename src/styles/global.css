@@ -4,7 +4,15 @@ body {
   font-family: 'IBM Plex Mono', monospace;
 }
 
+section[id] {
+  scroll-margin-top: 5rem;
+}
+
 html[lang="fa"] body {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+#language-toggle [lang="fa"] {
   font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
 }
 
