@@ -42,7 +42,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       }`}
                     >
                       {project.link && (
-                        <div class="absolute top-4 right-4 sm:top-6 sm:right-6 md:top-8 md:right-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
+                        <div class="absolute top-4 end-4 sm:top-6 sm:end-6 md:top-8 md:end-8 w-10 h-10 sm:w-11 sm:h-11 md:w-12 md:h-12 flex items-center justify-center bg-gray-900 rounded-full text-white transition-all duration-300 group-hover:bg-gray-700">
                           <svg
                             class="w-4 h-4 sm:w-4.5 sm:h-4.5 md:w-5 md:h-5 transition-transform duration-300 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
                             fill="none"
@@ -62,20 +62,21 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                       <div class="space-y-4">
                         <div>
                           <span
+                            dir="ltr"
                             data-i18n={`projects.${index}.number`}
                             class="text-sm font-mono"
                             style={{ color: siteConfig.accentColor }}
                           >
                             {t(`projects.${index}.number`)}
                           </span>
-                          <h3 data-i18n={`projects.${index}.name`} class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
-                            {t(`projects.${index}.name`)}
+                          <h3 class="text-xl sm:text-2xl font-bold text-gray-900 mt-1">
+                            <bdi data-i18n={`projects.${index}.name`}>{t(`projects.${index}.name`)}</bdi>
                           </h3>
                         </div>
 
                         <p
                           data-i18n={`projects.${index}.description`}
-                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pr-12 sm:pr-14 md:pr-16" : ""}`}
+                          class={`text-base sm:text-lg text-gray-600 leading-relaxed ${project.link ? "pe-12 sm:pe-14 md:pe-16" : ""}`}
                         >
                           {t(`projects.${index}.description`)}
                         </p>
@@ -84,6 +85,7 @@ const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
                           <div class="flex flex-wrap gap-1.5 sm:gap-2 pt-2">
                             {project.skills.map((_, skillIndex) => (
                               <span
+                                dir="auto"
                                 data-i18n={`projects.${index}.skills.${skillIndex}`}
                                 class={`px-2.5 sm:px-3 py-1 sm:py-1.5 bg-gray-900 text-white rounded-md sm:rounded-lg text-xs sm:text-sm font-medium transition-all duration-300 ${
                                   project.link ? "group-hover:bg-gray-800" : ""

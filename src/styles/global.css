@@ -3,3 +3,12 @@
 body {
   font-family: 'IBM Plex Mono', monospace;
 }
+
+html[lang="fa"] body {
+  font-family: 'Vazirmatn', Tahoma, Arial, sans-serif;
+}
+
+html[lang="fa"] :is(h1, h2, h3) {
+  letter-spacing: normal;
+  line-height: 1.5;
+}

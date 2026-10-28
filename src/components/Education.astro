@@ -23,8 +23,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             <div class="space-y-8">
               {siteConfig.education.map((edu, index) => (
                 <div class="bg-white rounded-lg shadow-sm border border-gray-100 p-4 sm:p-5 md:p-6 hover:shadow-md transition-shadow duration-300">
-                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between mb-4">
-                    <div>
+                  <div class="flex flex-col sm:flex-row sm:items-start sm:justify-between gap-x-4 mb-4">
+                    <div class="min-w-0">
                       <h3 data-i18n={`education.${index}.degree`} class="text-lg sm:text-xl font-semibold text-gray-900">
                         {t(`education.${index}.degree`)}
                       </h3>
@@ -36,7 +36,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                         {t(`education.${index}.school`)}
                       </p>
                     </div>
-                    <span data-i18n={`education.${index}.dateRange`} class="text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
+                    <span dir="auto" data-i18n={`education.${index}.dateRange`} class="shrink-0 text-xs sm:text-sm text-gray-500 mt-2 sm:mt-0">
                       {t(`education.${index}.dateRange`)}
                     </span>
                   </div>
@@ -44,7 +44,7 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
                   <ul class="space-y-2">
                     {edu.achievements.map((_, achievementIndex) => (
                       <li class="flex items-start">
-                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 mr-3 flex-shrink-0" />
+                        <span class="inline-block w-1.5 h-1.5 rounded-full bg-gray-400 mt-2 me-3 flex-shrink-0" />
                         <span data-i18n={`education.${index}.achievements.${achievementIndex}`} class="text-sm sm:text-base text-gray-600">
                           {t(`education.${index}.achievements.${achievementIndex}`)}
                         </span>
