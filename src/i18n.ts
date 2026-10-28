@@ -14,7 +14,7 @@ const english = {
   headings: { about: "About Me", projects: "Projects", experience: "Experience", education: "Education" },
   hero: { greeting: "Hello! 👋", introduction: "I'm ", outro: "" },
   social: { email: "Email", linkedin: "LinkedIn", github: "GitHub", twitter: "Twitter" },
-  language: { label: "فارسی", action: "Switch to Persian" },
+  language: { label: "فارسی", action: "فارسی: Switch to Persian" },
   copyright: `© ${year} ${siteConfig.name}. All rights reserved.`,
   skills: siteConfig.skills,
   projects: siteConfig.projects.map((project, index) => ({
@@ -39,7 +39,7 @@ const persian: typeof english = {
   headings: { about: "درباره من", projects: "پروژه‌ها", experience: "تجربه کاری", education: "تحصیلات" },
   hero: { greeting: "سلام! 👋", introduction: "من ", outro: " هستم" },
   social: { email: "ایمیل", linkedin: "لینکدین", github: "گیت‌هاب", twitter: "توییتر" },
-  language: { label: "English", action: "تغییر زبان به انگلیسی" },
+  language: { label: "English", action: "English: تغییر زبان به انگلیسی" },
   copyright: `© ${new Intl.NumberFormat("fa", { useGrouping: false }).format(year)} سروش لطفی. تمامی حقوق محفوظ است.`,
   skills: ["C++", "Python", "Qt", "الگوهای طراحی", "OOA&D", "شبکه‌های عصبی"],
   projects: [
