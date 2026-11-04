@@ -10,7 +10,7 @@ export const siteConfig = {
     // twitter: "https://x.com/lsorooshl"
   },
   aboutMe:
-    "interested in consiousness, computers and math. whatever makes me understand more about life!",
+    "interested in psychology, AI, computers and math. whatever makes me understand more about life!",
   skills: ["C++", "Python", "Qt", "Design Patterns", "OOA&D", "Neural Networks"],
   projects: [
     {

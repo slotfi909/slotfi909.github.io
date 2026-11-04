@@ -1,5 +1,6 @@
 ---
 import { siteConfig } from "../config";
+import { t } from '../i18n';
 
 const hasProjects = siteConfig.projects && siteConfig.projects.length > 0;
 const hasExperience = siteConfig.experience && siteConfig.experience.length > 0;
@@ -12,16 +13,17 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
       class="flex flex-col md:flex-row md:items-center md:justify-between gap-8"
     >
       <div class="flex flex-col gap-4">
-        <h3 class="text-2xl font-bold text-gray-800">
-          {siteConfig.name}
+        <h3 data-i18n="name" class="text-2xl font-bold text-gray-800">
+          {t('name')}
         </h3>
-        <p class="text-base text-gray-600">
-          {siteConfig.title}
+        <p data-i18n="title" class="text-base text-gray-600">
+          {t('title')}
         </p>
         <div class="flex gap-x-6">
           <a
             href={`mailto:${siteConfig.social.email}`}
-            aria-label="Email"
+            data-i18n-aria-label="social.email"
+            aria-label={t('social.email')}
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -48,7 +50,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             href={siteConfig.social.linkedin}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="LinkedIn"
+            data-i18n-aria-label="social.linkedin"
+            aria-label={t('social.linkedin')}
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -74,7 +77,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             href={siteConfig.social.twitter}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="Twitter"
+            data-i18n-aria-label="social.twitter"
+            aria-label={t('social.twitter')}
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -98,7 +102,8 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             href={siteConfig.social.github}
             target="_blank"
             rel="noopener noreferrer"
-            aria-label="GitHub"
+            data-i18n-aria-label="social.github"
+            aria-label={t('social.github')}
             class="text-gray-600 transition-colors duration-300 hover:text-[var(--accent-color)]"
             style={`--accent-color: ${siteConfig.accentColor}`}
           >
@@ -125,16 +130,18 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
         <nav class="flex gap-x-8">
           <a
             href="#about"
+            data-i18n="nav.about"
             class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
-            >About</a
+            >{t('nav.about')}</a
           >
           {
             hasProjects && (
               <a
                 href="#projects"
+                data-i18n="nav.projects"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Projects
+                {t('nav.projects')}
               </a>
             )
           }
@@ -142,9 +149,10 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             hasExperience && (
               <a
                 href="#experience"
+                data-i18n="nav.experience"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Experience
+                {t('nav.experience')}
               </a>
             )
           }
@@ -152,16 +160,16 @@ const hasEducation = siteConfig.education && siteConfig.education.length > 0;
             hasEducation && (
               <a
                 href="#education"
+                data-i18n="nav.education"
                 class="text-sm text-gray-600 hover:text-gray-800 transition-colors"
               >
-                Education
+                {t('nav.education')}
               </a>
             )
           }
         </nav>
         <p class="text-sm text-gray-500">
-          © {new Date().getFullYear()}
-          {siteConfig.name}. All rights reserved.
+          <span data-i18n="copyright">{t('copyright')}</span>
         </p>
       </div>
     </div>
